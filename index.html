@@ -1,0 +1,29 @@
+<html lang="en">
+    <head>
+        <title>Product page</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+
+        <div class="nav-bar"></div>
+
+        <div id="app">
+             
+            <!-- we are adding premiums as cutom attribute and we are binding it to the premium in data -->
+            <div class="cart">
+                <p>Cart({{cart.length}})</p>
+            </div>
+            <product :premiums="premium" @add-to-cart="updatecart" @remove-cart="deleteCart"></product>
+            <productdetails :details="details"></productdetails>
+            <productdetails :details="details"></productdetails>
+
+        </div>
+
+        <!-- Event Modifiers
+        <a href="https://www.google.com" v-on:click.stop="doThis">Click Me</a> -->
+
+            
+        <script src="main.js"></script>
+    </body>
+</html>
